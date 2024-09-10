@@ -1,0 +1,148 @@
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsl(0, 0%, 100%, 1%);
+  --veryLightGray: hsl(0, 0%, 95%);
+  --bigShoulder: "Big Shoulders Display", sans-serif;
+  --lexendDeca: "Lexend Deca", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+img {
+  display: block;
+  width: 64px;
+  height: 40px;
+}
+
+p,
+h1 {
+  margin: 0;
+  color: var(--veryLightGray);
+}
+
+h1 {
+  font-family: var(--bigShoulder);
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.paragraph {
+  line-height: 150%;
+  font-family: var(--lexendDeca);
+  font-weight: 400;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  display: flex;
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 40px;
+  width: 145px;
+  height: 37px;
+  border: none;
+  font-family: var(--lexendDeca);
+  background-color: var(--veryLightGray);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+section {
+  padding: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.sedans {
+  background-color: var(--brightOrange);
+  border-radius: 10px 0 0 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  max-width: 225px;
+}
+
+.sedans .learnMore {
+  color: var(--brightOrange);
+}
+
+.suvs {
+  background-color: var(--darkCyan);
+}
+
+.suvs .learnMore {
+  color: var(--darkCyan);
+}
+
+.luxury {
+  background-color: var(--veryDarkCyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.luxury .learnMore {
+  color: var(--veryDarkCyan);
+}
+
+@media screen and (689px <=width <=768px) {
+  body {
+    padding: 10px;
+  }
+
+  section {
+    gap: 50px;
+  }
+}
+
+@media screen and (321px <=width <=688px) {
+
+  body {
+    height: auto;
+    padding: 40px 0;
+  }
+
+  main {
+    border-radius: 0;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .info {
+    border: 1px solid;
+    max-width: 250px;
+  }
+
+  .sedans {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
+}
